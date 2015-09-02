@@ -1,6 +1,0 @@
-# Files to ignore
-
-bower_components
-*.map
-_*
-!src/scss/_*.scss
