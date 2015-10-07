@@ -1,4 +1,4 @@
-# [Image Viewer](https://github.com/fengyuanchen/viewer)
+# [Viewer](https://github.com/fengyuanchen/viewer)
 
 > A simple jQuery image viewing plugin.
 
