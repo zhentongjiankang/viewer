@@ -2,4 +2,4 @@
 
 > A simple jQuery image viewing plugin.
 
-- [Demo](http://fengyuanchen.github.io/viewer)
+- [Demo](https://fengyuanchen.github.io/viewer)
