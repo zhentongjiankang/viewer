@@ -1,5 +1,5 @@
-# [Viewer](https://github.com/fengyuanchen/viewer)
+# Viewer
 
 > A simple jQuery image viewing plugin.
 
-- [Demo](https://fengyuanchen.github.io/viewer)
+- [Homepage](http://fengyuanchen.github.io/viewer)
