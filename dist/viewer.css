@@ -23,17 +23,44 @@
 .viewer-close:before {
   font-size: 0;
   line-height: 0;
-
   display: block;
-
-  width: 20px;
-  height: 20px;
-
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  left: 25px;
   color: transparent; 
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAAUCAYAAABWOyJDAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAQPSURBVHic7Zs/iFxVFMa/0U2UaJGksUgnIVhYxVhpjDbZCBmLdAYECxsRFBTUamcXUiSNncgKQbSxsxH8gzAP3FU2jY0kKKJNiiiIghFlccnP4p3nPCdv3p9778vsLOcHB2bfveeb7955c3jvvNkBIMdxnD64a94GHMfZu3iBcRynN7zAOI7TG15gHCeeNUkr8zaxG2lbYDYsdgMbktBsP03jdQwljSXdtBhLOmtjowC9Mg9L+knSlcD8TNKpSA9lBpK2JF2VdDSR5n5J64m0qli399hNFMUlpshQii5jbXTbHGviB0nLNeNDSd9VO4A2UdB2fp+x0eCnaXxWXGA2X0au/3HgN9P4LFCjIANOJdrLr0zzZ+BEpNYDwKbpnQMeAw4m8HjQtM6Z9qa917zPQwFr3M5KgA6J5rTJCdFZJj9/lyvGhsDvwFNVuV2MhhjrK6b9bFiE+j1r87eBl4HDwCF7/U/k+ofAX5b/EXBv5JoLMuILzf3Ap6Z3EzgdqHMCuF7hcQf4HDgeoHnccncqdK/TvSDWffFXI/exICY/xZyqc6XLWF1UFZna4gJ7q8BsRvgd2/xXpo6P+D9dfT7PpECtA3cnWPM0GXGFZh/wgWltA+cDNC7X+AP4GzjZQe+k5dRxuYPeiuXU7e1qwLpDz7dFjXKRaSwuMLvAlG8zZlG+YmiK1HoFqT7wP2z+4Q45TfEGcMt01xLoNZEBTwRqD4BLpnMLeC1A41UmVxsXgXeBayV/Wx20rpTyrpnWRft7p6O/FdqzGrDukPNtkaMoMo3FBdBSQMOnYBCReyf05s126fU9ytfX98+mY54Kxnp7S9K3kj6U9KYdG0h6UdLbkh7poFXMfUnSOyVvL0h6VtIXHbS6nOP+s/Zm9mvyXW1uuC9ohZ72E9uDmXWLJOB1GxsH+DxPftsB8B6wlGDN02TAkxG6+4D3TWsbeC5CS8CDFce+AW500LhhOW2020TRjK3b21HEmgti9m0RonxbdMZeVzV+/4tF3cBpP7E9mKHNL5q8h5g0eYsCMQz0epq8gQrwMXAgcs0FGXGFRcB9wCemF9PkbYqM/Bas7fxLwNeJPdTdpo4itQti8lPMqTpXuozVRVXPpbHI3KkNTB1NfkL81j2mvhDp91HgV9MKuRIqrykj3WPq4rHyL+axj8/qGPmTqi6F9YDlHOvJU6oYcTsh/TYSzWmTE6JT19CtLTJt32D6CmHe0eQn1O8z5AXgT4sx4Vcu0/EQecMydB8z0hUWkTd2t4CrwNEePqMBcAR4mrBbwyXLPWJa8zrXmmLEhNBmfpkuY2102xxrih+pb+ieAb6vGhuA97UcJ5KR8gZ77K+99xxeYBzH6Q3/Z0fHcXrDC4zjOL3hBcZxnN74F+zlvXFWXF9PAAAAAElFTkSuQmCC');
+  background-image: url('../src/img/pic_icon.png');
   background-repeat: no-repeat;
 }
-
+.viewer-zoom-in:hover:before,
+.viewer-zoom-out:hover:before,
+.viewer-one-to-one:hover:before,
+.viewer-reset:hover:before,
+.viewer-prev:hover:before,
+.viewer-play:hover:before,
+.viewer-next:hover:before,
+.viewer-rotate-left:hover:before,
+.viewer-rotate-right:hover:before,
+.viewer-flip-horizontal:hover:before,
+.viewer-flip-vertical:hover:before,
+.viewer-fullscreen:hover:before,
+.viewer-fullscreen-exit:hover:before {
+  background-image: url('../src/img/pic_icon_hover.png');
+}
+.viewer-close:before {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 55px;
+  height: 55px;
+  color: transparent; 
+  background-image: url('../src/img/delete_icon.png');
+  background-repeat: no-repeat;
+}
+.viewer-close:hover:before {
+  background-image: url('../src/img/delete_icon_hover.png');
+}
 .viewer-zoom-in:before {
   content: 'Zoom In';
 
@@ -43,7 +70,7 @@
 .viewer-zoom-out:before {
   content: 'Zoom Out';
 
-  background-position: -20px 0;
+  background-position: -54px 0;
 }
 
 .viewer-one-to-one:before {
@@ -61,7 +88,7 @@
 .viewer-prev:before {
   content: 'Previous';
 
-  background-position: -80px 0;
+  background-position: -217px 0;
 }
 
 .viewer-play:before {
@@ -73,13 +100,13 @@
 .viewer-next:before {
   content: 'Next';
 
-  background-position: -120px 0;
+  background-position: -276px 0;
 }
 
 .viewer-rotate-left:before {
   content: 'Rotate Left';
 
-  background-position: -140px 0;
+  background-position: -108px 0;
 }
 
 .viewer-rotate-right:before {
@@ -97,7 +124,7 @@
 .viewer-flip-vertical:before {
   content: 'Flip Vertical';
 
-  background-position: -200px 0;
+  background-position: -165px 0;
 }
 
 .viewer-fullscreen:before {
@@ -115,7 +142,7 @@
 .viewer-close:before {
   content: 'Close';
 
-  background-position: -260px 0;
+  background-position: 0 0;
 }
 
 .viewer-container {
@@ -255,26 +282,33 @@
 .viewer-toolbar {
   overflow: hidden;
 
-  width: 280px;
+  width: 550px;
   margin: 0 auto 5px;
-  padding: 3px 0;
+  padding: 3px 30px;
+  height: 80px;
+  line-height: 45px;
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 40px;
 }
 .viewer-toolbar > li {
   float: left;
+  position: relative;
   overflow: hidden;
-
-  width: 24px;
-  height: 24px;
-
+  width: 80px;
+  height: 80px;
+  line-height: 110px;
+  text-align: center;
+  font-size: 15px;
+  color: #ccc;
   cursor: pointer; 
-
-  border-radius: 50%;
+  /*border-radius: 50%;
   background-color: #000;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .5);*/
 }
 .viewer-toolbar > li:hover {
-  background-color: #000;
-  background-color: rgba(0, 0, 0, .8);
+  /*background-color: #000;*/
+  color: white;
+  /*background-color: rgba(0, 0, 0, .8);*/
 }
 .viewer-toolbar > li:before {
   margin: 2px;
@@ -341,8 +375,8 @@
 
 .viewer-button {
   position: absolute;
-  top: -40px;
-  right: -40px;
+  top: 5px;
+  right: 5px;
 
   overflow: hidden;
 
@@ -351,9 +385,9 @@
 
   cursor: pointer; 
 
-  border-radius: 50%;
+  /*border-radius: 50%;
   background-color: #000;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .5);*/
 }
 .viewer-button:before {
   position: absolute;
@@ -422,4 +456,51 @@
   .viewer-hide-md-down {
     display: none;
   }
+}
+/* 上一张／下一张 */
+.prev-button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+.next-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+.prev-button:before {
+  position: static;
+  content: 'Previous';
+  background-position: 0 0;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 36px;
+  height: 64px;
+  color: transparent;
+  background-image: url('../src/img/prev_icon.png');
+  background-repeat: no-repeat;
+}
+.next-button:before {
+  position: static;
+  content: 'Next';
+  background-position: 0 0;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 36px;
+  height: 64px;
+  color: transparent;
+  background-image: url('../src/img/next_icon.png');
+  background-repeat: no-repeat;
+}
+.prev-button:hover:before {
+  background-image: url('../src/img/prev_icon_hover.png');
+}
+.next-button:hover:before {
+  background-image: url('../src/img/next_icon_hover.png');
 }
