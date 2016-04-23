@@ -71,7 +71,7 @@
   var EVENT_VIEWED = 'viewed.' + NAMESPACE;
 
   // Supports
-  var SUPPORT_TRANSITION = typeof ELEMENT_VIEWER.style.transition !== 'undefined';
+  var SUPPORT_TRANSITION = false;//typeof ELEMENT_VIEWER.style.transition !== 'undefined';
 
   // Others
   var round = Math.round;
@@ -700,7 +700,7 @@
 
       this.initImage($.proxy(function () {
         $image.
-          // toggleClass(CLASS_TRANSITION, options.transition).
+          toggleClass(CLASS_TRANSITION, options.transition).
           toggleClass(CLASS_MOVE, options.movable);
 
         this.renderImage($.proxy(function () {
