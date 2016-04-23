@@ -1887,8 +1887,8 @@
       '</div>' +
       '<div class="viewer-tooltip"></div>' +
       '<div class="viewer-button" data-action="mix"></div>' +
-       '<div class="prev-button viewer-prev" data-action="prev"></div>' +
-      '<div class="next-button viewer-next" data-action="next"></div>' +
+       '<div class="prev-button" data-action="prev"></div>' +
+      '<div class="next-button" data-action="next"></div>' +
       '<div class="viewer-player"></div>' +
     '</div>'
   );

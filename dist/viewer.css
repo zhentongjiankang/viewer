@@ -19,15 +19,14 @@
 .viewer-flip-horizontal:before,
 .viewer-flip-vertical:before,
 .viewer-fullscreen:before,
-.viewer-fullscreen-exit:before,
-.viewer-close:before {
+.viewer-fullscreen-exit:before {
   font-size: 0;
   line-height: 0;
   display: block;
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 5px;
+  top: 15px;
   left: 25px;
   color: transparent; 
   background-image: url('../src/img/pic_icon.png');
@@ -48,6 +47,7 @@
 .viewer-fullscreen-exit:hover:before {
   background-image: url('../src/img/pic_icon_hover.png');
 }
+/* delete button */
 .viewer-close:before {
   font-size: 0;
   line-height: 0;
@@ -282,9 +282,9 @@
 .viewer-toolbar {
   overflow: hidden;
 
-  width: 550px;
+  width: 545px;
   margin: 0 auto 5px;
-  padding: 3px 30px;
+  padding: 0 30px;
   height: 80px;
   line-height: 45px;
   background-color: rgba(0, 0, 0, .5);
@@ -296,7 +296,7 @@
   overflow: hidden;
   width: 80px;
   height: 80px;
-  line-height: 110px;
+  line-height: 115px;
   text-align: center;
   font-size: 15px;
   color: #ccc;
@@ -311,7 +311,7 @@
   /*background-color: rgba(0, 0, 0, .8);*/
 }
 .viewer-toolbar > li:before {
-  margin: 2px;
+  /*margin: 2px;*/
 }
 .viewer-toolbar > li + li {
   margin-left: 1px;
@@ -380,8 +380,8 @@
 
   overflow: hidden;
 
-  width: 80px;
-  height: 80px;
+  width: 55px;
+  height: 55px;
 
   cursor: pointer; 
 
@@ -391,8 +391,8 @@
 }
 .viewer-button:before {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .viewer-fixed {
@@ -460,15 +460,15 @@
 /* 上一张／下一张 */
 .prev-button {
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: 45%;
+  left: 5px;
   width: 30px;
   height: 30px;
 }
 .next-button {
   position: absolute;
-  top: 50%;
-  right: 0;
+  top: 45%;
+  right: 10px;
   width: 30px;
   height: 30px;
 }
