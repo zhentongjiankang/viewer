@@ -1067,7 +1067,18 @@
         this.isViewed && index === this.index) {
         return;
       }
-
+      //prev-button hide
+      if(index == 0){
+        $(".prev-button").hide();
+      }else{
+        $(".prev-button").show();
+      }
+      //next-button hide
+      if(index == this.length - 1){
+        $(".next-button").hide();
+      }else{
+        $(".next-button").show();
+      }
       if (this.trigger(EVENT_VIEW).isDefaultPrevented()) {
         return;
       }
