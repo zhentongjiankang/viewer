@@ -71,7 +71,7 @@
   var EVENT_VIEWED = 'viewed.' + NAMESPACE;
 
   // Supports
-  var SUPPORT_TRANSITION = false;//typeof ELEMENT_VIEWER.style.transition !== 'undefined';
+  var SUPPORT_TRANSITION = typeof ELEMENT_VIEWER.style.transition !== 'undefined';
 
   // Others
   var round = Math.round;
@@ -1071,7 +1071,7 @@
         this.isViewed && index === this.index) {
         return;
       }
-      
+
       if (this.trigger(EVENT_VIEW).isDefaultPrevented()) {
         return;
       }
@@ -1127,26 +1127,15 @@
     },
     
     download: function(){
-          var $item,
-              $img,
-              url,
-              link;
-          $item = this.$items.eq(this.index);
-          $img = $item.find(SELECTOR_IMG);
-          url = $img.data('originalUrl');
-          //下载原图功能实现
-          // link = document.createElement('a');
-          // link.href = url;
-          // link.download = '';
-          // $('body').append(link);
-          // link.click();
-          // $('body > [download]').remove();
-          $.fileDownload(url);
+      var $item = this.$items.eq(this.index);
+      var $img = $item.find(SELECTOR_IMG);
+      var url = $img.data('originalUrl');
+      $.fileDownload(url);
     },
     
     // View the previous image
     prev: function () {
-      //picture loop
+      // picture loop
       if(this.index == 0){
         this.view(this.length - 1);
         this.index = this.length -1;
@@ -1157,7 +1146,7 @@
 
     // View the next image
     next: function () {
-      //picture loop
+      // picture loop
       this.view((this.index + 1)%(this.length));
     },
 
@@ -1909,7 +1898,7 @@
       '</div>' +
       '<div class="viewer-tooltip"></div>' +
       '<div class="viewer-button" data-action="mix"></div>' +
-       '<div class="prev-button" data-action="prev"></div>' +
+      '<div class="prev-button" data-action="prev"></div>' +
       '<div class="next-button" data-action="next"></div>' +
       '<div class="viewer-player"></div>' +
     '</div>'

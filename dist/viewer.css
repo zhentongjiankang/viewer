@@ -17,6 +17,7 @@
 .viewer-rotate-left:before,
 .viewer-rotate-right:before,
 .viewer-flip-horizontal:before,
+.viewer-flip-vertical:before,
 .viewer-download-origin:before,
 .viewer-fullscreen:before,
 .viewer-fullscreen-exit:before {
@@ -29,7 +30,7 @@
   top: 15px;
   left: 25px;
   color: transparent; 
-  background-image: url('../src/img/pic_icon.png');
+  background-image: url('../src/img/toolbar_icon.png');
   background-repeat: no-repeat;
 }
 .viewer-zoom-in:hover:before,
@@ -45,21 +46,24 @@
 .viewer-download-origin:hover:before,
 .viewer-fullscreen:hover:before,
 .viewer-fullscreen-exit:hover:before {
-  background-image: url('../src/img/pic_icon_hover.png');
+  background-image: url('../src/img/toolbar_icon_hover.png');
 }
-/* delete button */
+/* close button */
 .viewer-close:before {
   font-size: 0;
   line-height: 0;
+
   display: block;
   width: 55px;
   height: 55px;
+
   color: transparent; 
-  background-image: url('../src/img/delete_icon.png');
+  background-image: url('../src/img/close_icon.png');
   background-repeat: no-repeat;
 }
+
 .viewer-close:hover:before {
-  background-image: url('../src/img/delete_icon_hover.png');
+  background-image: url('../src/img/close_icon_hover.png');
 }
 .viewer-zoom-in:before {
   content: 'Zoom In';
@@ -121,8 +125,14 @@
   background-position: -180px 0;
 }
 
-.viewer-download-origin:before {
+.viewer-flip-vertical:before {
   content: 'Flip Vertical';
+
+  background-position: -200px 0;
+}
+  
+.viewer-download-origin:before {
+  content: 'Download Origin';
 
   background-position: -165px 0;
 }
@@ -294,25 +304,20 @@
   float: left;
   position: relative;
   overflow: hidden;
+
   width: 80px;
   height: 80px;
+
   line-height: 115px;
   text-align: center;
   font-size: 15px;
   color: #ccc;
   cursor: pointer; 
-  /*border-radius: 50%;
-  background-color: #000;
-  background-color: rgba(0, 0, 0, .5);*/
 }
 .viewer-toolbar > li:hover {
-  /*background-color: #000;*/
   color: white;
-  /*background-color: rgba(0, 0, 0, .8);*/
 }
-.viewer-toolbar > li:before {
-  /*margin: 2px;*/
-}
+
 .viewer-toolbar > li + li {
   margin-left: 1px;
 }
@@ -384,10 +389,6 @@
   height: 55px;
 
   cursor: pointer; 
-
-  /*border-radius: 50%;
-  background-color: #000;
-  background-color: rgba(0, 0, 0, .5);*/
 }
 .viewer-button:before {
   position: absolute;
@@ -457,7 +458,7 @@
     display: none;
   }
 }
-/* 上一张／下一张 */
+/* prev-button/next-button */
 .prev-button {
   position: absolute;
   top: 45%;
