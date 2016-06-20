@@ -4,30 +4,34 @@
 .viewer-toolbar {
   overflow: hidden;
 
-  width: 280px;
+  width: 545px;
   margin: 0 auto 5px;
-  padding: 3px 0;
+  padding: 0 30px;
+  height: 80px;
+  line-height: 45px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 40px;
+  border-box: border-box !important;
 
   > li {
     float: left;
+    position: relative;
     overflow: hidden;
 
-    width: 24px;
-    height: 24px;
+    width: 80px;
+    height: 80px;
 
-    @include bg-color($color-black, .5);
-    border-radius: 50%;
-
+    line-height: 115px;
+    text-align: center;
+    font-size: 15px;
+    color: #ccc;
     cursor: pointer;
 
     &:hover {
-      @include bg-color($color-black, .8);
+      color: white;
     }
-
-    &:before {
-      margin: 2px;
-    }
-
+    
     + li {
       margin-left: 1px;
     }

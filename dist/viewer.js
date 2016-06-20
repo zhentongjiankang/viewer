@@ -5,7 +5,7 @@
  * Copyright (c) 2015-2016 Fengyuan Chen
  * Released under the MIT license
  *
- * Date: 2016-03-11T07:57:59.486Z
+ * Date: 2016-06-20T06:21:24.062Z
  */
 
 (function (factory) {
@@ -672,6 +672,10 @@
           this.scaleY(-image.scaleY || -1);
           break;
 
+        // case 'download-origin':
+        //   this.download();
+        //   break;
+
         default:
           if (this.isPlayed) {
             this.stop();
@@ -1121,15 +1125,27 @@
         }, this), 1000);
       }
     },
+    // download: function(){
+    //   var $item = this.$items.eq(this.index);
+    //   var $img = $item.find(SELECTOR_IMG);
+    //   var url = $img.data('originalUrl');
+    //   $.fileDownload(url);
+    // },
 
     // View the previous image
     prev: function () {
-      this.view(max(this.index - 1, 0));
+      // picture loop
+      if (this.index === 0) {
+        this.view(this.length - 1);
+      } else {
+        this.view(this.index - 1);
+      }
     },
 
     // View the next image
     next: function () {
-      this.view(min(this.index + 1, this.length - 1));
+      // picture loop
+      this.view((this.index + 1)%(this.length));
     },
 
     /**
@@ -1863,21 +1879,17 @@
 
   Viewer.TEMPLATE = (
     '<div class="viewer-container">' +
-      '<div class="viewer-canvas"></div>' +
+      '<div class="viewer-canvas" data-action="mix"></div>' +
       '<div class="viewer-footer">' +
         '<div class="viewer-title"></div>' +
         '<ul class="viewer-toolbar">' +
-          '<li class="viewer-zoom-in" data-action="zoom-in"></li>' +
-          '<li class="viewer-zoom-out" data-action="zoom-out"></li>' +
-          '<li class="viewer-one-to-one" data-action="one-to-one"></li>' +
-          '<li class="viewer-reset" data-action="reset"></li>' +
-          '<li class="viewer-prev" data-action="prev"></li>' +
-          '<li class="viewer-play" data-action="play"></li>' +
-          '<li class="viewer-next" data-action="next"></li>' +
-          '<li class="viewer-rotate-left" data-action="rotate-left"></li>' +
-          '<li class="viewer-rotate-right" data-action="rotate-right"></li>' +
-          '<li class="viewer-flip-horizontal" data-action="flip-horizontal"></li>' +
-          '<li class="viewer-flip-vertical" data-action="flip-vertical"></li>' +
+          '<li class="viewer-zoom-in" data-action="zoom-in">放大</li>' +
+          '<li class="viewer-zoom-out" data-action="zoom-out">缩小</li>' +
+          '<li class="viewer-one-to-one" data-action="one-to-one">原图</li>' +
+          '<li class="viewer-rotate-left" data-action="rotate-left">旋转</li>' +
+          // '<li class="viewer-download-origin" data-action="download-origin">下载原图</li>' +
+          '<li class="viewer-prev" data-action="prev">上一张</li>' +
+          '<li class="viewer-next" data-action="next">下一张</li>' +
         '</ul>' +
         '<div class="viewer-navbar">' +
           '<ul class="viewer-list"></ul>' +
@@ -1885,6 +1897,8 @@
       '</div>' +
       '<div class="viewer-tooltip"></div>' +
       '<div class="viewer-button" data-action="mix"></div>' +
+      '<div class="prev-button" data-action="prev"></div>' +
+      '<div class="next-button" data-action="next"></div>' +
       '<div class="viewer-player"></div>' +
     '</div>'
   );

@@ -140,15 +140,27 @@
         }, this), 1000);
       }
     },
+    // download: function(){
+    //   var $item = this.$items.eq(this.index);
+    //   var $img = $item.find(SELECTOR_IMG);
+    //   var url = $img.data('originalUrl');
+    //   $.fileDownload(url);
+    // },
 
     // View the previous image
     prev: function () {
-      this.view(max(this.index - 1, 0));
+      // picture loop
+      if (this.index === 0) {
+        this.view(this.length - 1);
+      } else {
+        this.view(this.index - 1);
+      }
     },
 
     // View the next image
     next: function () {
-      this.view(min(this.index + 1, this.length - 1));
+      // picture loop
+      this.view((this.index + 1)%(this.length));
     },
 
     /**

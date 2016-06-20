@@ -78,6 +78,10 @@
           this.scaleY(-image.scaleY || -1);
           break;
 
+        // case 'download-origin':
+        //   this.download();
+        //   break;
+
         default:
           if (this.isPlayed) {
             this.stop();
