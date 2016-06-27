@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var pkg = require('./package');
+var base64 = require('gulp-base64');
 var now = new Date();
 var scripts = {
       name: 'viewer.js',
@@ -137,6 +138,13 @@ gulp.task('css', ['csslint'], function () {
         'Opera >= 12',
         'Safari >= 6'
       ]
+    }))
+    .pipe(base64({
+      baseDir: 'img',
+      extensions: ['svg', 'png', /\.jpg#datauri$/i],
+      exclude:    [/\.server\.(com|net)\/dynamic\//, '--live.jpg'],
+      maxImageSize: 8 * 1024, // bytes
+      debug: true
     }))
     .pipe(plugins.csscomb())
     .pipe(gulp.dest(styles.dest))
