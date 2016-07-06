@@ -5,7 +5,7 @@
  * Copyright (c) 2015-2016 Fengyuan Chen
  * Released under the MIT license
  *
- * Date: 2016-06-27T05:40:59.910Z
+ * Date: 2016-07-06T06:57:26.467Z
  */
 .viewer-zoom-in:before,
 .viewer-zoom-out:before,
@@ -294,6 +294,9 @@
 
   overflow: hidden;
 
+  -webkit-box-sizing: border-box !important;
+     -moz-box-sizing: border-box !important;
+          box-sizing: border-box !important; 
   width: 545px;
   height: 80px;
   margin: 0 auto 5px;
@@ -302,8 +305,6 @@
   border-radius: 40px;
   background-color: #000;
   background-color: rgba(0, 0, 0, .5);
-
-  border-box: border-box !important;
 }
 .viewer-toolbar > li {
   font-size: 15px;
@@ -475,7 +476,7 @@
 }
 
 .viewer-open {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .viewer-show {

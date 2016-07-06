@@ -2,7 +2,7 @@
     '<div class="viewer-container">' +
       '<div class="viewer-canvas" data-action="mix"></div>' +
       '<div class="viewer-footer">' +
-        '<div class="viewer-title"></div>' +
+        // '<div class="viewer-title"></div>' +
         '<ul class="viewer-toolbar">' +
           '<li class="viewer-zoom-in" data-action="zoom-in">放大</li>' +
           '<li class="viewer-zoom-out" data-action="zoom-out">缩小</li>' +

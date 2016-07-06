@@ -5,7 +5,7 @@
  * Copyright (c) 2015-2016 Fengyuan Chen
  * Released under the MIT license
  *
- * Date: 2016-06-27T05:40:59.910Z
+ * Date: 2016-07-06T06:57:26.467Z
  */
 
 (function (factory) {
@@ -1881,7 +1881,7 @@
     '<div class="viewer-container">' +
       '<div class="viewer-canvas" data-action="mix"></div>' +
       '<div class="viewer-footer">' +
-        '<div class="viewer-title"></div>' +
+        // '<div class="viewer-title"></div>' +
         '<ul class="viewer-toolbar">' +
           '<li class="viewer-zoom-in" data-action="zoom-in">放大</li>' +
           '<li class="viewer-zoom-out" data-action="zoom-out">缩小</li>' +
