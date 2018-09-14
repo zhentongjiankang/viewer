@@ -71,8 +71,10 @@
      * View one of the images with image's index
      *
      * @param {Number} index
+     * 不管index是否和当前相同，强制刷新视图
+     * @param {Number} isForce
      */
-    view: function (index) {
+    view: function (index, isForce) {
       var $title = this.$title;
       var $image;
       var $item;
@@ -82,8 +84,8 @@
 
       index = Number(index) || 0;
 
-      if (!this.isShown || this.isPlayed || index < 0 || index >= this.length ||
-        this.isViewed && index === this.index) {
+      if (!isForce && (!this.isShown || this.isPlayed || index < 0 || index >= this.length ||
+        this.isViewed && index === this.index)) {
         return;
       }
 
@@ -579,10 +581,14 @@
 
     // Toggle the image size between its natural size and initial size
     toggle: function () {
-      if (this.image.ratio === 1) {
-        this.zoomTo(this.initialImage.ratio, true);
-      } else {
-        this.zoomTo(1, true);
+      const index = this.index;
+
+      const $image = this.$images.eq(index);
+      const full_url = $image.attr('data-full-original');
+      if (full_url) {
+        $image.attr('data-original', full_url);
+        this.initList();
+        this.view(index, true);
       }
     },
 
